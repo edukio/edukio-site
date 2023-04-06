@@ -504,6 +504,24 @@
     }
     gtag('js', new Date());
     gtag('config', 'UA-152755107-1');
+
+    function scrollToBottom() {
+  var windowHeight = window.innerHeight;
+  var fullHeight = document.body.clientHeight;
+  var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scrollPosition + windowHeight >= fullHeight) {
+    // Voltar para o topo
+    window.scrollTo(0, 0);
+  } else {
+    // Rolar a página devagar
+    window.scrollTo(0, scrollPosition + 10);
+    setTimeout(scrollToBottom, 10);
+  }
+}
+
+// Iniciar a rolagem infinita
+setInterval(scrollToBottom, 5000);
   </script>
 </body>
 
