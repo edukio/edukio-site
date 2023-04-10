@@ -505,6 +505,15 @@
     gtag('js', new Date());
     gtag('config', 'UA-152755107-1');
 
+
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {
+        currentDate = Date.now();
+      } while (currentDate - date < milliseconds);
+    }
+
     function scrollToBottom() {
       var windowHeight = window.innerHeight;
       var fullHeight = document.body.clientHeight;
@@ -512,7 +521,10 @@
 
       if (scrollPosition + windowHeight >= fullHeight) {
         // Voltar para o topo
+        sleep(2000);
         window.scrollTo(0, 0);
+        sleep(2000);
+        scrollToBottom();
       } else {
         // Rolar a página devagar
         window.scrollTo(0, scrollPosition + 1);
@@ -521,6 +533,7 @@
     }
 
     // Iniciar a rolagem infinita
+    //setInterval(scrollToBottom, 50000);
 
     // Selecione o elemento desejado
     var button = document.querySelector('#page-top');
@@ -528,7 +541,8 @@
     // Adicione o ouvinte de evento ao elemento
     button.addEventListener('click', function() {
       // Inicie a rolagem infinita
-      setInterval(scrollToBottom, 50000);
+      scrollToBottom()
+      
     });
     
   </script>
