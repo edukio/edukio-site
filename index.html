@@ -523,9 +523,12 @@
         // Voltar para o topo
         sleep(2000);
         window.scrollTo(0, 0);
-        sleep(2000);
         scrollToBottom();
       } else {
+        if (scrollPosition == 0) {
+          sleep(2000);
+        }
+
         // Rolar a página devagar
         window.scrollTo(0, scrollPosition + 1);
         setTimeout(scrollToBottom, 1);
