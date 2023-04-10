@@ -521,7 +521,16 @@
     }
 
     // Iniciar a rolagem infinita
-    setInterval(scrollToBottom, 50000);
+
+    // Selecione o elemento desejado
+    var button = document.querySelector('#page-top');
+
+    // Adicione o ouvinte de evento ao elemento
+    button.addEventListener('click', function() {
+      // Inicie a rolagem infinita
+      setInterval(scrollToBottom, 50000);
+    });
+    
   </script>
 </body>
 
