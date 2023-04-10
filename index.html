@@ -510,12 +510,7 @@
       var windowHeight = window.innerHeight;
       var fullHeight = document.body.clientHeight;
       var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      if (window.scrollY == 0) {
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-          scrollToBottom();
-        }, 2000);
-      } else if (scrollPosition + windowHeight >= fullHeight) {
+      if (scrollPosition + windowHeight >= fullHeight) {
         // Voltar para o topo
         setTimeout(function() {
           window.scrollTo(0, 0);
