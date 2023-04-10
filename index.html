@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
 
   <!-- Custom styles for this template -->
-  <link href="css/new-age.css" rel="stylesheet">
+  <link href="css/new-age.css?v=0.1" rel="stylesheet">
 
 </head>
 
@@ -505,23 +505,23 @@
     gtag('js', new Date());
     gtag('config', 'UA-152755107-1');
 
-    // function scrollToBottom() {
-    //   var windowHeight = window.innerHeight;
-    //   var fullHeight = document.body.clientHeight;
-    //   var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    function scrollToBottom() {
+      var windowHeight = window.innerHeight;
+      var fullHeight = document.body.clientHeight;
+      var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-    //   if (scrollPosition + windowHeight >= fullHeight) {
-    //     // Voltar para o topo
-    //     window.scrollTo(0, 0);
-    //   } else {
-    //     // Rolar a página devagar
-    //     window.scrollTo(0, scrollPosition + 10);
-    //     setTimeout(scrollToBottom, 10);
-    //   }
-    // }
+      if (scrollPosition + windowHeight >= fullHeight) {
+        // Voltar para o topo
+        window.scrollTo(0, 0);
+      } else {
+        // Rolar a página devagar
+        window.scrollTo(0, scrollPosition + 1);
+        setTimeout(scrollToBottom, 1);
+      }
+    }
 
-    // // Iniciar a rolagem infinita
-    // setInterval(scrollToBottom, 5000);
+    // Iniciar a rolagem infinita
+    setInterval(scrollToBottom, 50000);
   </script>
 </body>
 
