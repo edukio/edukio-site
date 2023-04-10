@@ -505,23 +505,24 @@
     gtag('js', new Date());
     gtag('config', 'UA-152755107-1');
 
-
     function scrollToBottom() {
       var windowHeight = window.innerHeight;
       var fullHeight = document.body.clientHeight;
       var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
       if (scrollPosition + windowHeight >= fullHeight) {
         // Voltar para o topo
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-          scrollToBottom();
-        }, 2000);
+        window.scrollTo(0, 0);
+        scrollToBottom();
       } else {
         // Rolar a página devagar
         window.scrollTo(0, scrollPosition + 1);
-        setTimeout(scrollToBottom, 1);
+        setTimeout(scrollToBottom, 200);
       }
     }
+
+    // Iniciar a rolagem infinita
+    //setInterval(scrollToBottom, 50000);
 
     // Selecione o elemento desejado
     var button = document.querySelector('#page-top');
@@ -530,6 +531,7 @@
     button.addEventListener('click', function() {
       // Inicie a rolagem infinita
       scrollToBottom();
+      
     });
     
   </script>
