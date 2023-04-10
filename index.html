@@ -518,14 +518,13 @@
       var windowHeight = window.innerHeight;
       var fullHeight = document.body.clientHeight;
       var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
+      if (window.scrollY == 0) {
+        sleep(2000);
+      }
       if (scrollPosition + windowHeight >= fullHeight) {
         // Voltar para o topo
         sleep(2000);
         window.scrollTo(0, 0);
-        if (window.scrollY == 0) {
-          sleep(2000);
-        }
         scrollToBottom();
       } else {
         // Rolar a página devagar
