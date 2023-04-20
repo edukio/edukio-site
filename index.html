@@ -517,12 +517,9 @@
       } else {
         // Rolar a página devagar
         window.scrollTo(0, scrollPosition + 1);
-        setTimeout(scrollToBottom, 200);
+        setTimeout(scrollToBottom, 500);
       }
     }
-
-    // Iniciar a rolagem infinita
-    //setInterval(scrollToBottom, 50000);
 
     // Selecione o elemento desejado
     var button = document.querySelector('#page-top');
