@@ -13,11 +13,6 @@ This is an open source landing page maintained by edukio.com employees. This lan
 * https://edukio.com
 * https://www.linkedin.com/company/edukio
 
-Edukio was created and is maintained by **[José Matheus](https://www.linkedin.com/in/jose-matheus/)** and **[Guilherme Henrique](https://www.linkedin.com/in/guienrik/)**, Owners of [Edukio.com](https://edukio.com/).
-
-* https://www.linkedin.com/in/jose-matheus/
-* https://www.linkedin.com/in/guienrik/
-
 ## Copyright and License
 
-Copyright 2017-2021 Edukio. Code released under the [MIT](https://raw.githubusercontent.com/GuiEnrik/edukio-site/master/LICENSE) license.
+Copyright 2017-2023 Edukio. Code released under the [MIT](https://raw.githubusercontent.com/GuiEnrik/edukio-site/master/LICENSE) license.
