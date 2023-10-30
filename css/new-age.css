@@ -160,8 +160,6 @@ header.masthead {
     padding-top: 150px;
     padding-bottom: 100px;
     color: #656565;
-    /*background: url("../imagens/bg-pattern.png"), #7b4397;
-  background: url("../imagens/bg-pattern.png"), linear-gradient(to left, #4169E1, #191970);*/
 }
 
 header.masthead .header-content {
@@ -343,15 +341,15 @@ section.cta .overlay {
 }
 
 .card1 {
-    background-image: url(../imagens/cemi2.png);
+    background-image: url(../imagens/parceiros/cemi.png);
 }
 
 .card2 {
-    background-image: url(../imagens/febratec.png);
+    background-image: url(../imagens/parceiros/febratec.png);
 }
 
 .card3 {
-    background-image: url(../imagens/seedf.png);
+    background-image: url(../imagens/parceiros/seedf.png);
 }
 
 .card:hover {
